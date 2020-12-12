@@ -78,9 +78,7 @@ PyObject *pysoc_raise_pysoc_error(PyObject *self, PyObject *args) {
 }
 
 PyMODINIT_FUNC PyInit_pysoc(void) {
-    PyObject *m;
-
-    m = PyModule_Create(&pysocmodule);
+    PyObject *m = PyModule_Create(&pysocmodule);
     if (m == NULL) return NULL;
 
     PysocError = PyErr_NewException("pysoc.PysocError", NULL, NULL);
